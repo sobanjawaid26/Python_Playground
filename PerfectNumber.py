@@ -10,4 +10,19 @@ def isPerfect(number):
     else:
         return False
 
-print(isPerfect(496))
+# print(isPerfect(496))
+
+# Write a program to display RANGE of PERFECT NUMBERS?
+
+def listOfPerfectNumber(limit):
+    list = []
+    for i in range(1, limit):
+        sum = 0
+        for j in range(1, limit):
+            if i % j == 0:
+                sum += j
+        if sum == i:
+            list.append(i)
+    return list
+
+print(listOfPerfectNumber(100))
